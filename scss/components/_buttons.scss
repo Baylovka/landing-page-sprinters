@@ -1,0 +1,30 @@
+.button {
+    display: flex;
+    padding: clamp(0.5rem, calc(0.409rem + 0.455vw), 0.75rem) clamp(1rem, calc(0.818rem + 0.909vw), 1.5rem); // min: 8px, max: 12px | min: 16px, max: 24px
+    justify-content: center;
+    align-items: center;
+    background: $color-primary-brand;
+    border: none;
+    color: $color-base;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 160%;
+    cursor: pointer;
+    transition: color .3s, background .3s;
+
+    &:hover {
+        color: $color-primary-brand;
+        background: transparent;
+    }
+
+    &--transpanent {
+        color: $color-primary-brand;
+        background: transparent;
+
+        &:hover {
+            color: $color-base;
+            background: $color-primary-brand;
+        }
+    }
+}
