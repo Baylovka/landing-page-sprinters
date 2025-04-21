@@ -1,0 +1,60 @@
+.header {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 78px;
+    }
+
+    &__logo-nav-container {
+        display: flex;
+        gap: clamp(1.5rem, calc(-7.227rem + 13.636vw), 3rem); // min: 24px, max: 48px
+    }
+
+    &__nav {
+        display: none;
+
+        @media screen and (min-width: $bp-small-desktop) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: clamp(1.125rem, calc(-1.057rem + 3.409vw), 1.5rem); // min: 18px, max: 24px
+    }
+
+    &__link {
+        &::before {
+            bottom: -2rem;
+        }
+    }
+
+    &__buttons-container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__auth-container {
+        display: none;
+
+        @media screen and (min-width: 656px) {
+            display: flex;
+        }
+
+        &--decor-line {
+            margin: 0 clamp(0.75rem, calc(-0.705rem + 2.273vw), 1rem); // min: 12px, max: 16px
+            background: $color-border;
+            width: 2px;
+        }
+    }
+
+    &__btn-burger {
+        display: flex;
+
+        @media screen and (min-width: $bp-small-desktop) {
+            display: none;
+        }
+    }
+}

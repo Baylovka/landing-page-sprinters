@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Task by Mykhnevych</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/mobile-menu.js" defer></script>
 </head>
-<body>
 
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <div class="header__logo-nav-container">
+                    <a class="header__logo" href="/">
+                        <img src="/images/logo.svg" alt="logo">
+                    </a>
+
+                    <nav class="header__nav">
+                        <ul class="header__menu">
+                            <li>
+                                <a class="link header__link" href="/">Головна</a>
+                            </li>
+                            <li>
+                                <a class="link header__link" href="/">Перевізникам</a>
+                            </li>
+                            <li>
+                                <a class="link header__link" href="/">Про нас</a>
+                            </li>
+                            <li>
+                                <a class="link header__link link--active" href="/">Профіль перевізника</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header__buttons-container">
+                    <div class="header__auth-container">
+                        <button class="button button--transpanent">Створити профіль</button>
+                        <div class="header__auth-container--decor-line"></div>
+                        <button class="button">Увійти</button>
+                    </div>
+
+                    <button class="button-icon header__btn-burger" id="mobile-menu-open">
+                        <svg>
+                            <use href="./images/icons.svg#icon-burger"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="container" style="height: 100%;">
+            <div class="mobile-menu__container">
+                <div class="header__container">
+                    <div class="header__logo-nav-container">
+                        <a class="header__logo" href="/">
+                            <img src="/images/logo.svg" alt="logo">
+                        </a>
+                    </div>
+
+                    <button class="button-icon" id="mobile-menu-close">
+                        <svg>
+                            <use href="images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__menu">
+                        <li><a class="link mobile-menu__link" href="#">Головна</a></li>
+                        <li><a class="link mobile-menu__link" href="#">Перевізникам</a></li>
+                        <li><a class="link mobile-menu__link" href="#">Про нас</a></li>
+                        <li><a class="link mobile-menu__link" href="#">Профіль перевізника</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu__auth-container">
+                    <button class="button button--transpanent">Створити профіль</button>
+                    <div class="header__auth-container--decor-line"></div>
+                    <button class="button">Увійти</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
