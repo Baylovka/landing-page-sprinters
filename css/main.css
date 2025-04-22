@@ -566,7 +566,7 @@ a {
 .hero-section::before {
   position: absolute;
   content: "";
-  background: url(/images/decor-1.svg) no-repeat;
+  background: url(../images/decor-1.svg) no-repeat;
   background-position: left top;
   background-size: 50%;
   width: 100%;
@@ -590,7 +590,7 @@ a {
 .hero-section::after {
   position: absolute;
   content: "";
-  background: url(/images/decor-2.svg) no-repeat;
+  background: url(../images/decor-2.svg) no-repeat;
   background-position: right bottom;
   background-size: 50%;
   width: 100%;
