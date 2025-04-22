@@ -269,6 +269,32 @@ a {
   color: #25324B;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: clamp(0.75rem, 0.068rem + 3.409vw, 2.625rem);
+}
+.pagination__bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #D6DDEB;
+  cursor: pointer;
+}
+.pagination__bullet--active {
+  background-color: #4640DE;
+  cursor: default;
+}
+
 .link-plate {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,6 +403,100 @@ a {
 .staff-card__social-media-icon {
   fill: none;
   stroke: #515B6F;
+}
+
+.review-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(1.25rem, 1.205rem + 0.227vw, 1.375rem);
+  height: 410px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 16px 0px #25324B;
+          box-shadow: 0px 4px 16px 0px #25324B;
+  background: #FFFFFF;
+}
+.review-card__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(0.75rem, 0.523rem + 1.136vw, 1.375rem);
+}
+.review-card__avatar-container {
+  width: 72px;
+  height: 72px;
+}
+.review-card__info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.review-card__name {
+  color: #25324B;
+  font-size: clamp(1.125rem, 0.989rem + 0.682vw, 1.5rem);
+  font-style: normal;
+  font-weight: 600;
+}
+.review-card__route {
+  color: #4640DE;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+.review-card__date {
+  color: #515B6F;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.review-card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 4px;
+}
+.review-card__text {
+  color: #25324B;
+  font-size: clamp(0.938rem, 0.915rem + 0.114vw, 1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review-card__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(0.125rem, 0.08rem + 0.227vw, 0.25rem);
+}
+.review-card__star {
+  fill: #4640DE;
+  width: 18px;
+  height: 18px;
 }
 
 .container {
@@ -1009,6 +1129,83 @@ a {
   font-style: normal;
   font-weight: 800;
   line-height: 120%;
+}
+
+.review-section {
+  position: relative;
+  z-index: 0;
+  padding: 72px 0 45px;
+  overflow: hidden;
+}
+.review-section::before {
+  position: absolute;
+  content: "";
+  background: url(../images/bg-review-section.svg) no-repeat;
+  background-size: cover;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+}
+.review-section::after {
+  position: absolute;
+  content: "";
+  background: url(../images/decor-review-section.svg) no-repeat;
+  background-position: right center;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
+  left: 10%;
+  top: 0;
+  z-index: -1;
+}
+.review-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(1.125rem, 0.807rem + 1.591vw, 2rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.review-section__left-block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 32%;
+          flex: 1 1 32%;
+  min-width: 260px;
+}
+.review-section__swiper-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 64%;
+          flex: 1 1 64%;
+  min-width: 0;
+}
+.review-section__title {
+  color: #25324B;
+  font-family: "Lato";
+  font-size: clamp(2rem, 1.727rem + 1.364vw, 2.75rem);
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: clamp(1.125rem, 1.034rem + 0.455vw, 1.375rem);
+}
+.review-section__title--accent {
+  color: #26A4FF;
+}
+.review-section__text {
+  color: #25324B;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: clamp(2rem, 1.773rem + 1.136vw, 2.625rem);
+}
+.review-section__button {
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 140%;
+}
+.review-section__card-wrapper {
+  padding: 18px;
 }
 
 .mobile-menu {
