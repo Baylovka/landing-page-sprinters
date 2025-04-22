@@ -983,6 +983,13 @@ a {
       -ms-flex: 0 0 calc(16.6666666667% - 160px);
           flex: 0 0 calc(16.6666666667% - 160px);
 }
+@media screen and (min-width: 1200px) {
+  .service-section__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(16.6666666667% - 160px);
+            flex: 1 0 calc(16.6666666667% - 160px);
+  }
+}
 .service-section__item:nth-child(2) {
   white-space: nowrap;
 }
