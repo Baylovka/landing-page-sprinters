@@ -295,11 +295,111 @@ a {
   line-height: 160%;
 }
 
+.staff-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(0.875rem, 0.83rem + 0.227vw, 1rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #D6DDEB;
+  background: #FFFFFF;
+}
+.staff-card__avatar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+}
+.staff-card__avatar-container > img {
+  width: 100%;
+  height: auto;
+}
+.staff-card__content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.staff-card__name {
+  color: #25324B;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+.staff-card__work-experience {
+  color: #7C8493;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  white-space: nowrap;
+}
+.staff-card__socials-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+.staff-card__social-media-icon {
+  fill: none;
+  stroke: #515B6F;
+}
+
 .container {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.section__title {
+  color: #25324B;
+  font-family: "Lato";
+  font-size: clamp(1.75rem, 1.659rem + 0.455vw, 2rem);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+}
+.section__subtitle {
+  color: #515B6F;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
 }
 
 .header__container {
@@ -340,7 +440,7 @@ a {
   gap: clamp(1.125rem, -1.057rem + 3.409vw, 1.5rem);
 }
 .header__link::before {
-  bottom: -2rem;
+  bottom: -1.8rem;
 }
 .header__buttons-container {
   display: -webkit-box;
@@ -766,6 +866,75 @@ a {
 .hero-section__info-item-content--accent {
   color: #25324B;
   font-weight: 600;
+}
+
+.staff-section {
+  padding: 72px 0;
+}
+.staff-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.staff-section__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.staff-section__link {
+  color: #4640DE;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+.staff-section__link::before {
+  height: 2px;
+}
+.staff-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: clamp(0.625rem, 0.489rem + 0.682vw, 1rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.staff-section__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 clamp(16.25rem, 7.679rem + 42.857vw, 20rem);
+          flex: 0 0 clamp(16.25rem, 7.679rem + 42.857vw, 20rem);
+}
+@media screen and (min-width: 460px) {
+  .staff-section__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(20% - 64px);
+            flex: 1 0 calc(20% - 64px);
+  }
+}
+.staff-section__item:nth-last-child(-n+2) {
+  display: none;
+}
+@media screen and (min-width: 460px) {
+  .staff-section__item:nth-last-child(-n+2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .mobile-menu {

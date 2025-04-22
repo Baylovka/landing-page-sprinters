@@ -1,10 +1,18 @@
 .section {
-
     &__title {
-
+        color: $color-primary-text;
+        font-family: 'Lato';
+        font-size: clamp(1.75rem, calc(1.659rem + 0.455vw), 2rem); // min: 28px, max: 32px
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
     }
 
     &__subtitle {
-
+        color: $color-text;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
     }
 }
