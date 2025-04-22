@@ -1,0 +1,16 @@
+.link-plate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem); // min: 8px, max: 16px
+    padding: 8px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid $color-primary-brand;
+
+    color: $color-primary-brand;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+}
