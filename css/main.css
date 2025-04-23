@@ -641,6 +641,41 @@ a {
   background: #D6DDEB;
 }
 
+.bread-crumbs {
+  position: absolute;
+  left: 0;
+  bottom: -72px;
+  z-index: 2;
+}
+.bread-crumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding-left: 20px;
+}
+.bread-crumbs__item:not(:last-child)::after {
+  content: "/";
+  margin: 0 clamp(0.125rem, 0.08rem + 0.227vw, 0.25rem);
+  color: #7C8493;
+}
+.bread-crumbs__link {
+  color: #7C8493;
+  font-family: "Rubik";
+  font-size: clamp(0.813rem, 0.744rem + 0.341vw, 1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.bread-crumbs__link--current {
+  color: #25324B;
+}
+
 .container {
   width: 100%;
   max-width: 1240px;
