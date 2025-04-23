@@ -634,6 +634,13 @@ a {
   color: #FFFFFF;
 }
 
+.decor-line {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: #D6DDEB;
+}
+
 .container {
   width: 100%;
   max-width: 1240px;
