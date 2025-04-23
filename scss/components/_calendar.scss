@@ -1,0 +1,127 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    border: 1px solid $color-border;
+    padding: 24px;
+    background: $color-base;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+    &__action {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: $color-primary-brand;
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%;
+        border: 1px solid $color-secondary-brand;
+        transition: background .3s;
+
+        &:hover {
+            background: $color-secondary-gray;
+        }
+
+        & > svg {
+            width: 18px;
+            height: 18px;
+            fill: $color-primary-brand;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    &__month-display {
+        color: $color-primary-text;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%;
+    }
+
+    &__button {
+        font-size: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    &__button--prev {
+        transform: rotate(90deg);
+    }
+
+    &__icon-button {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: $color-primary-brand;
+    }
+
+    &__button--next {
+        transform: rotate(270deg);
+    }
+
+    &__weekdays {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    &__weekday {
+        color: #7C8493;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    &__day {
+        padding:
+            clamp(0.25rem, calc(0.205rem + 0.227vw), 0.375rem) // min: 4px, max: 6px 
+            clamp(0.375rem, calc(0.239rem + 0.682vw), 0.75rem); // min: 6px, max: 12px
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+
+        &--current-month {
+            color: $color-primary-text;
+        }
+
+        &--other-month {
+            color: $color-secondary-text;
+        }
+
+        &--highlight {
+            border-radius: 50%;
+            background: $color-primary-brand;
+            color: $color-base;
+        }
+    }
+}
