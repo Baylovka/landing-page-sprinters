@@ -499,6 +499,141 @@ a {
   height: 18px;
 }
 
+.calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  border: 1px solid #D6DDEB;
+  padding: 24px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.calendar__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4640DE;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  border: 1px solid #CCCCF5;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.calendar__action:hover {
+  background: #F8F8FD;
+}
+.calendar__action > svg {
+  width: 18px;
+  height: 18px;
+  fill: #4640DE;
+}
+.calendar__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.calendar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px;
+}
+.calendar__month-display {
+  color: #25324B;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.calendar__button {
+  font-size: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.calendar__button--prev {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.calendar__icon-button {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #4640DE;
+}
+.calendar__button--next {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calendar__weekday {
+  color: #7C8493;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calendar__day {
+  padding: clamp(0.25rem, 0.205rem + 0.227vw, 0.375rem) clamp(0.375rem, 0.239rem + 0.682vw, 0.75rem);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+}
+.calendar__day--current-month {
+  color: #25324B;
+}
+.calendar__day--other-month {
+  color: #D6DDEB;
+}
+.calendar__day--highlight {
+  border-radius: 50%;
+  background: #4640DE;
+  color: #FFFFFF;
+}
+
 .container {
   width: 100%;
   max-width: 1240px;
@@ -986,6 +1121,161 @@ a {
 .hero-section__info-item-content--accent {
   color: #25324B;
   font-weight: 600;
+}
+
+.details-section {
+  padding: clamp(3.25rem, 2.795rem + 2.273vw, 4.5rem) 0;
+}
+.details-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(2.75rem, 2.295rem + 2.273vw, 4rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.details-section__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(66.6666666667% - 64px);
+          flex: 1 1 calc(66.6666666667% - 64px);
+  min-width: 0;
+}
+.details-section__description-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  margin-bottom: clamp(1.25rem, 1.159rem + 0.455vw, 1.5rem);
+}
+.details-section__text {
+  color: #515B6F;
+  font-size: clamp(0.938rem, 0.915rem + 0.114vw, 1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.details-section__social-media-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  margin-bottom: clamp(2rem, 1.818rem + 0.909vw, 2.5rem);
+}
+.details-section__links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: clamp(0.5rem, 0.318rem + 0.909vw, 1rem);
+}
+.details-section__icon-social-media {
+  fill: #4640DE;
+}
+.details-section__link {
+  color: #4640DE;
+  font-size: clamp(0.875rem, 0.83rem + 0.227vw, 1rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+}
+.details-section__link::before {
+  height: 1px;
+}
+.details-section__image {
+  width: 100%;
+  height: auto;
+}
+.details-section__aside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(33.3333333333% - 64px);
+          flex: 1 1 calc(33.3333333333% - 64px);
+}
+.details-section__countries-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(1.25rem, 1.159rem + 0.455vw, 1.5rem);
+  margin-bottom: clamp(2rem, 1.273rem + 3.636vw, 4rem);
+}
+.details-section__list-countries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(0.625rem, 0.534rem + 0.455vw, 0.875rem);
+}
+.details-section__item-country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(0.625rem, 0.489rem + 0.682vw, 1rem);
+  color: #25324B;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.details-section__icon-country-flag {
+  width: 42px;
+  height: 32px;
+}
+.details-section__more-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(0.5rem, 0.318rem + 0.909vw, 1rem);
+  color: #4640DE;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.details-section__more-button:hover {
+  color: rgba(70, 64, 222, 0.8);
+}
+.details-section__icon-arrow {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #4640DE;
+}
+.details-section__calendar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(1.25rem, 1.159rem + 0.455vw, 1.5rem);
 }
 
 .staff-section {

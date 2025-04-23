@@ -1,0 +1,129 @@
+.details-section {
+    padding: clamp(3.25rem, calc(2.795rem + 2.273vw), 4.5rem) 0; // min: 52px, max: 72px
+
+    &__container {
+        display: flex;
+        gap: clamp(2.75rem, calc(2.295rem + 2.273vw), 4rem); // min: 44px, max: 64px
+        flex-wrap: wrap;
+    }
+
+    &__main {
+        flex: 1 1 calc(100% / 3 * 2 - 64px);
+        min-width: 0;
+    }
+
+    &__description-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: clamp(1.25rem, calc(1.159rem + 0.455vw), 1.5rem); // min: 20px, max: 24px
+    }
+
+    &__text {
+        color: $color-text;
+        font-size: clamp(0.938rem, calc(0.915rem + 0.114vw), 1rem); // min: 15px, max: 16px
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+
+    &__social-media-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: clamp(2rem, calc(1.818rem + 0.909vw), 2.5rem); // min: 32px, max: 40px
+    }
+
+    &__links-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem); // min: 8px, max: 16px
+    }
+
+    &__icon-social-media {
+        fill: $color-primary-brand;
+    }
+
+    &__link {
+        color: $color-primary-brand;
+        font-size: clamp(0.875rem, calc(0.83rem + 0.227vw), 1rem); // min: 14px, max: 16px
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+
+        &::before {
+            height: 1px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__aside {
+        flex: 1 1 calc(100% / 3 - 64px);
+    }
+
+    &__countries-container {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.25rem, calc(1.159rem + 0.455vw), 1.5rem); // min: 20px, max: 24px
+        margin-bottom: clamp(2rem, calc(1.273rem + 3.636vw), 4rem); // min: 32px, max: 64px
+    }
+
+    &__list-countries {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0.625rem, calc(0.534rem + 0.455vw), 0.875rem); // min: 10px, max: 14px
+    }
+
+    &__item-country {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.625rem, calc(0.489rem + 0.682vw), 1rem); // min: 10px, max: 16px
+        color: $color-primary-text;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+
+    &__icon-country-flag {
+        width: 42px;
+        height: 32px;
+    }
+
+    &__more-button {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem); // min: 8px, max: 16px
+        color: $color-primary-brand;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 160%;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        transition: color .3s;
+
+        &:hover {
+            color: rgba($color-primary-brand, 0.8);
+        }
+    }
+
+    &__icon-arrow {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: $color-primary-brand;
+    }
+
+    &__calendar-container {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.25rem, calc(1.159rem + 0.455vw), 1.5rem); // min: 20px, max: 24px
+    }
+}

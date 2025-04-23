@@ -10,6 +10,7 @@
     <script src="js/mobile-menu.js" defer></script>
     <script src="js/swiper-bundle.min.js" defer></script>
     <script src="js/review-slider.js" defer></script>
+    <script src="js/calendar.js" defer></script>
 </head>
 
 <body>
@@ -250,6 +251,134 @@
                     </div>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section class="details-section">
+        <div class="container">
+            <div class="details-section__container">
+                <main class="details-section__main">
+                    <div class="details-section__description-container">
+                        <h2 class="section__title details-section__title">Опис перевізника</h2>
+                        <p class="details-section__text">
+                            Stripe is a software platform for starting and running internet businesses. Millions of
+                            businesses rely on Stripe’s software tools to accept payments, expand globally, and manage
+                            their businesses online. Stripe has been at the forefront of expanding internet commerce,
+                            powering new business models, and supporting the latest platforms, from marketplaces to
+                            mobile commerce sites. We believe that growing the GDP of the internet is a problem rooted
+                            in code and design, not finance. Stripe is built for developers, makers, and creators. We
+                            work on solving the hard technical problems necessary to build global economic
+                            infrastructure—from designing highly reliable systems to developing advanced machine
+                            learning algorithms to prevent fraud.
+                        </p>
+                    </div>
+                    <div class="details-section__social-media-container">
+                        <h2 class="section__title details-section__title">Ми у соц. мережах</h2>
+                        <div class="details-section__links-container">
+                            <div class="link-plate">
+                                <svg class="icon details-section__icon-social-media">
+                                    <use href="./images/icons.svg#icon-social-twitter"></use>
+                                </svg>
+                                <a class="link details-section__link"
+                                    href="https://www.twitter.com">twitter.com/stripe</a>
+                            </div>
+                            <div class="link-plate">
+                                <svg class="icon details-section__icon-social-media">
+                                    <use href="./images/icons.svg#icon-social-facebook"></use>
+                                </svg>
+                                <a class="link details-section__link"
+                                    href="https://www.facebook.com">facebook.com/StripeHQ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-section__images-container">
+                        <img class="details-section__image" src="./images/truck-1.webp" alt="truck">
+                        <img class="details-section__image" src="./images/truck-2.webp" alt="truck">
+                        <img class="details-section__image" src="./images/truck-3.webp" alt="truck">
+                    </div>
+                </main>
+                <aside class="details-section__aside">
+                    <div class="details-section__countries-container">
+                        <h2 class="section__title details-section__title">Обслуговуємо країни</h2>
+                        <ul class="details-section__list-countries">
+                            <li class="details-section__item-country">
+                                <svg class="icon details-section__icon-country-flag">
+                                    <use href="./images/icons.svg#icon-France"></use>
+                                </svg>
+                                <span>Франція</span>
+                            </li>
+                            <li class="details-section__item-country">
+                                <svg class="icon details-section__icon-country-flag">
+                                    <use href="./images/icons.svg#icon-Italy"></use>
+                                </svg>
+                                <span>Італія</span>
+                            </li>
+                            <li class="details-section__item-country">
+                                <svg class="icon details-section__icon-country-flag">
+                                    <use href="./images/icons.svg#icon-Germany"></use>
+                                </svg>
+                                <span>Німеччина</span>
+                            </li>
+                            <li class="details-section__item-country">
+                                <svg class="icon details-section__icon-country-flag">
+                                    <use href="./images/icons.svg#icon-Netherlands"></use>
+                                </svg>
+                                <span>Нідерланди</span>
+                            </li>
+                            <li class="details-section__item-country">
+                                <svg class="icon details-section__icon-country-flag">
+                                    <use href="./images/icons.svg#icon-Spain"></use>
+                                </svg>
+                                <span>Іспанія</span>
+                            </li>
+                        </ul>
+                        <button class="details-section__more-button">
+                            <span>Усі країни</span>
+                            <svg class="icon details-section__icon-arrow">
+                                <use href="./images/icons.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="details-section__calendar-container">
+                        <h2 class="section__title details-section__title">Календар поїздок</h2>
+                        <div class="calendar">
+                            <button class="calendar__action">
+                                <svg class="icon">
+                                    <use href="./images/icons.svg#icon-plus"></use>
+                                </svg>
+                                <span>Купити квиток</span>
+                            </button>
+                            <div class="calendar__content">
+                                <div class="calendar__header">
+                                    <span class="calendar__month-display">November 2021</span>
+                                    <div class="calendar__buttons-container">
+                                        <button class="calendar__button calendar__button--prev">
+                                            <svg class="icon calendar__icon-button">
+                                                <use href="./images/icons.svg#icon-arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="calendar__button calendar__button--next">
+                                            <svg class="icon calendar__icon-button">
+                                                <use href="./images/icons.svg#icon-arrow"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="calendar__weekdays">
+                                    <span class="calendar__weekday">Sun</span>
+                                    <span class="calendar__weekday">Mon</span>
+                                    <span class="calendar__weekday">Tue</span>
+                                    <span class="calendar__weekday">Wed</span>
+                                    <span class="calendar__weekday">Thu</span>
+                                    <span class="calendar__weekday">Fri</span>
+                                    <span class="calendar__weekday">Sat</span>
+                                </div>
+                                <div class="calendar__days"></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
         </div>
     </section>
 
